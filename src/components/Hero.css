@@ -1,0 +1,168 @@
+#hero {
+    min-height: 100vh;
+}
+
+.resume {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 40px;
+}
+
+.resume-btn {
+    background-color: transparent;
+    border: 1px solid aliceblue;
+    color: aliceblue;
+    padding: 0.8rem 0.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 4px rgb(186, 186, 186);
+
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.25s ease,
+        background-color 0.3s,
+        color 0.3s;
+}
+
+.resume-btn:hover {
+    transform: scale(1.08);
+}
+
+
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 4rem auto;
+    gap: 120px
+}
+
+.hero-photo {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 8px;
+    outline: 4px solid white;
+}
+
+.hero-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-greeting {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(24, 66, 253);
+    padding-bottom: 15px;
+}
+
+.hero-name {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: white;
+    padding-bottom: 15px;
+    text-shadow: 0 0 8px rgb(46, 85, 255);
+}
+
+.hero-profession {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: rgb(197, 197, 197);
+    padding-bottom: 25px;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgb(200, 200, 200);
+    max-width: 400px;
+    padding-bottom: 25px;
+    line-height: 1.4rem;
+}
+
+.pro-btn {
+    color: rgb(75, 108, 254);
+    border: 1px solid rgb(24, 66, 253);
+    box-shadow: 0 0 4px rgb(24, 66, 253);
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 10px 15px;
+    max-width: 150px;
+    text-decoration: none;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    cursor: pointer;
+}
+
+.pro-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgb(24, 66, 253);
+}
+
+
+
+@media (max-width: 768px) {
+  /* HERO */
+  #hero {
+    min-height: auto;
+  }
+
+  /* RESUME */
+  .resume {
+    padding: 15px;
+  }
+
+  /* HERO CONTENT */
+  .hero-content {
+    flex-direction: column;
+    gap: 40px;
+    margin: 2rem auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .hero-photo {
+    max-width: 200px;
+  }
+
+  .hero-block {
+    align-items: center;
+  }
+
+  /* TEXT */
+  .hero-greeting {
+    font-size: 1.2rem;
+  }
+
+  .hero-name {
+    font-size: 2.1rem;
+  }
+
+  .hero-profession {
+    font-size: 1.6rem;
+  }
+
+  .hero-description {
+    display: none;
+  }
+
+  /* BUTTONS */
+  .pro-btn {
+    max-width: none;
+    margin-top: 18px;
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  .resume-btn {
+    font-size: 14px;
+    padding: 0.7rem 1rem;
+  }
+}

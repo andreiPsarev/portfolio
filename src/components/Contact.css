@@ -1,0 +1,120 @@
+#contact {
+    min-height: 100vh;
+}
+
+.contact-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-header {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: rgb(197, 197, 197);
+    padding-bottom: 25px;
+}
+
+.contact-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgb(200, 200, 200);
+    max-width: 800px;
+    padding-bottom: 25px;
+    line-height: 1.8rem;
+    text-align: center;
+}
+
+.contact-address {
+    display: flex;
+    gap: 150px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgb(200, 200, 200);
+    max-width: 800px;
+    padding: 25px;
+    line-height: 1.8rem;
+    text-align: center;
+}
+
+.address,
+.phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.message-btn {
+    color: rgb(75, 108, 254);
+    border: 1px solid rgb(24, 66, 253);
+    box-shadow: 0 0 4px rgb(24, 66, 253);
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 350px;
+
+    font-size: 1.8rem;
+    font-weight: 400;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    cursor: pointer;
+}
+
+.message-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgb(24, 66, 253);
+}
+
+.developed {
+    opacity: 0.6;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 400;
+    color: rgb(200, 200, 200);
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .contact-address {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .message-btn {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 780px) {
+    #contact {
+        padding: 16px;
+    }
+
+    .contact-address {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .address img,
+    .phone img {
+        width: 36px;
+    }
+
+    .message-btn {
+        font-size: 1.4rem;
+    }
+}

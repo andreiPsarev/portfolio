@@ -1,0 +1,261 @@
+#projects {
+    min-height: 100vh;
+    scroll-margin-top: 120px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.projects-info {
+    grid-column: 1 / span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+.projects-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: rgb(197, 197, 197);
+    padding-bottom: 25px;
+}
+
+.projects-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgb(200, 200, 200);
+    max-width: 800px;
+    padding-bottom: 25px;
+    line-height: 1.8rem;
+    text-align: center;
+}
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.project {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+/* --- Preview Card --- */
+
+.project-preview {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    aspect-ratio: 16 / 9;
+    box-shadow:
+        /* мягкая общая тень */
+        0 12px 28px rgba(57, 55, 62, 0.45),
+
+        /* глубокая тень снизу */
+        0 18px 40px rgba(0, 0, 0, 0.35),
+
+        /* холодный неоновый подсвет */
+        0 0 8px rgba(75, 108, 254, 0.25),
+
+        /* тонкий контур */
+        inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.project-img-wrapper {
+    padding: 1px;
+    background: radial-gradient(ellipse 40% 50% at top center,
+            hsl(50, 100%, 90%),
+            hsl(0, 0%, 35%));
+    border-radius: 6px;
+    height: 100%;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+}
+
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(2px);
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 20px;
+    margin: 1px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.overlay-top {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    transform: translateY(-20px);
+    opacity: 0;
+
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.overlay-top img {
+    width: 36px;
+    height: 36px;
+    margin-left: 20px;
+}
+
+.overlay-top h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: white;
+}
+
+
+.overlay-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    align-content: flex-end;
+
+    transform: translateY(20px);
+    opacity: 0;
+
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.overlay-bottom p {
+    margin: 0;
+    padding: 4px 10px;
+
+    border: 1px solid white;
+    border-radius: 999px;
+
+    font-size: 1rem;
+    color: white;
+}
+
+.project-preview:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-preview:hover .overlay-top,
+.project-preview:hover .overlay-bottom {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* --- Text --- */
+.project-info {
+    margin-top: 40px;
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(197, 197, 197);
+}
+
+.project-info p {
+    margin-top: 12px;
+    max-width: 700px;
+    line-height: 1.6;
+    color: rgb(200, 200, 200);
+}
+
+/* --- Icons --- */
+.project-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.project-icons a {
+    font-size: 20px;
+    color: #cdd5e1;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.project-icons a:hover {
+    transform: translateY(-2px);
+}
+
+
+.project-icons img {
+    width: 32px;
+}
+
+
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-info {
+        grid-column: auto;
+        max-width: none;
+        text-align: left;
+        align-items: start;
+    }
+
+    .projects-text {
+        text-align: left;
+    }
+}
+
+@media (max-width: 780px) {
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: min-content;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 60px;
+    }
+
+
+    .projects-info {
+        padding-bottom: 0;
+        align-items: center;
+    }
+
+    .projects-title {
+        padding-bottom: 0;
+    }
+
+    .projects-text {
+        padding-bottom: 0;
+        text-align: center;
+    }
+}
